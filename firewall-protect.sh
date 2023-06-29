@@ -1,9 +1,9 @@
 #!/bin/bash
-
+## Modified by: Pedro Flor
 # Assing IPv4 from argument to a global variable
 ipv4=$1
 
-## Validar direccion IPv4
+## Validate IPv4 address
 # Source: https://www.linuxjournal.com/content/validating-ip-address-bash-script
 function valid_ip()
 {
@@ -25,7 +25,6 @@ function valid_ip()
 
 
 ## Author: Nisrin Ahmed aka Wh1teDrvg0n
-## Modified by: Pedro Flor
 function do_firewall() {
   echo "Appliying firewall rules on \"tun0\" to protect you from adversaries ;)"
 
@@ -76,7 +75,6 @@ then
   echo "Error: \"tun0\" doesn't exist"
   exit
 fi
-
 
 ## Verify if root
 if [ $(id -u) != 0 ]
